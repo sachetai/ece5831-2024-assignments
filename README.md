@@ -2,7 +2,7 @@
 
 This repository contains Python practice notebooks and resources for learning and advancing Python skills, covering basic Python syntax, data science tools, and NumPy. Each section is structured with explanations in Markdown and code implementations in Jupyter Notebooks.
 
-##Table of Contents:
+Table of Contents:
 
 1. Introduction to Python
 2. Data Science Tutorials
