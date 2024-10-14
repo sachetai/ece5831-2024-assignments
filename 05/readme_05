@@ -1,1 +1,76 @@
+# Rock-Paper-Scissors Classification
+This repository contains scripts and a Jupyter notebook for classifying rock, paper, and scissors gestures using a neural network model trained on Google's Teachable Machine. Additionally, there is a live webcam-based version of the classifier that allows real-time gesture recognition.
+
+Project Overview
+1. rock-paper-scissor.py
+This script takes an image as input and classifies it as "rock," "paper," or "scissors" using a pre-trained neural network model.
+
+Input: An image file (JPG, PNG, etc.).
+Output: Displays the image with the predicted class and confidence score.
+Usage:
+python rock-paper-scissor.py <path_to_image>
+Example Output:
+
+Class: paper
+Confidence Score: 0.9968
+
+2. rock-paper-scissor-live.py
+This script uses your system's webcam to capture live images and classify the hand gestures in real-time as "rock," "paper," or "scissors."
+
+Usage:
+python rock-paper-scissor-live.py
+Press 'q' to quit the live classification.
+
+3. teachable.ipynb
+A Jupyter notebook that walks through the process of loading the trained model, testing it with sample images, and validating the model's performance.
+
+Instructions:
+Upload your model (keras_model.h5) and labels (labels.txt) in the notebook environment.
+Upload images to test the classifier in an interactive environment.
+
+4. Model Training
+The model was trained using Google's Teachable Machine. You can create your own dataset of rock, paper, and scissors images and export the model as a TensorFlow/Keras model to use with these scripts.
+
+Installation -
+
+### Step 1: Set Up a Conda Environment
+To run these scripts, you will need a Python environment with the necessary dependencies. You can set up a new environment using Conda:
+
+# Create a new environment
+conda create -n rps_env python=3.9
+
+# Activate the environment
+conda activate rps_env
+
+# Install the required packages
+pip install tensorflow opencv-python matplotlib numpy
+
+### Step 2: Clone the Repository
+Clone this repository to your local machine:
+
+git clone https://github.com/your-username/rock-paper-scissors.git
+cd rock-paper-scissors
+
+### Step 3: Run the Scripts
+For image-based classification:
+
+python rock-paper-scissor.py <path_to_image>
+For live webcam classification:
+
+python rock-paper-scissor-live.py
+
+
+Files
+rock-paper-scissor.py: Script to classify a static image.
+rock-paper-scissor-live.py: Script to classify rock-paper-scissors gestures using a live webcam.
+teachable.ipynb: Jupyter notebook for testing and validating the trained model.
+keras_model.h5: The trained model (not included in the repository, please download from your Teachable Machine project).
+labels.txt: Class labels for the model (not included in the repository, please download from your Teachable Machine project).
+README.md: Documentation for the project.
+
+
+How It Works
+Model Input: The image (either uploaded or captured via webcam) is resized to 224x224 pixels and normalized.
+Prediction: The image is fed into the neural network model, and predictions are made. The model outputs probabilities for each class (rock, paper, scissors).
+Result: The class with the highest probability is selected, and the result (along with confidence) is displayed on the screen.
 
