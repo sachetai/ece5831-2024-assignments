@@ -1,4 +1,3 @@
-# two_layer_net_with_back_prop.py
 import numpy as np
 from layers import Relu, Affine, SoftmaxWithLoss
 
