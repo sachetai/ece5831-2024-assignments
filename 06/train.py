@@ -1,4 +1,3 @@
-# train.py
 import numpy as np
 import pickle
 from sklearn.datasets import fetch_openml
