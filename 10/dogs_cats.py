@@ -165,3 +165,6 @@ if __name__ == '__main__':
 
     # Step 4: Predict on test images
     dogscats.predict()
+
+
+#Achieved accuracy of 96.i5%
