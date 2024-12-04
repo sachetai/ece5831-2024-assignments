@@ -91,3 +91,10 @@ if __name__ == "__main__":
     boston_housing_model.plot_loss()
     boston_housing_model.evaluate()
     boston_housing_model.save_model()
+
+'''Explanation of Custom Accuracy:
+
+custom_accuracy function:
+It compares the predicted values to the true values, and counts how many predictions are within a specified tolerance (default is 5%).
+tf.abs(y_true - y_pred) / y_true < tolerance calculates if the difference between predicted and actual values is within 5% of the actual value.
+The accuracy is then calculated as the average of true/false values. After evaluation, you'll see the custom "accuracy" which tells you how many predictions are within a ±5% tolerance.'''
